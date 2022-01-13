@@ -10,9 +10,8 @@ describe('UserDetailComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UserDetailComponent ]
-    })
-    .compileComponents();
+      declarations: [UserDetailComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -37,8 +36,8 @@ describe('UserDetailComponent', () => {
     component.user = mockUsers[2];
     fixture.detectChanges();
 
-    let idElement: HTMLParagraphElement = fixture.debugElement.nativeElement
-      .querySelector(
+    let idElement: HTMLParagraphElement =
+      fixture.debugElement.nativeElement.querySelector(
         '.card-body p:first-child'
       );
 
@@ -63,6 +62,4 @@ describe('UserDetailComponent', () => {
       expect(component.onDelete).toHaveBeenCalled();
     });
   });
-
-
 });
